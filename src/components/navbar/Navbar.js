@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './logo.svg';
 import { auth } from '../../firebase/firebase.utils';
+import { connect } from 'react-redux';
 
-export default function Navbar({ currentUser }) {
+function Navbar({ currentUser }) {
     return (
         <nav className="navbar">
             <Link className="logo-container" to="/"> <Logo className="logo" /> </Link>
@@ -20,4 +21,10 @@ export default function Navbar({ currentUser }) {
         </nav>
     )
 }
+
+const mapStateToProps = (state) => ({
+    currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Navbar);
   
