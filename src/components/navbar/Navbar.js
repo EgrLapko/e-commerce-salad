@@ -1,10 +1,12 @@
 import React from 'react';
+import CartIcon from '../CartIcon/CartIcon';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './logo.svg';
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
+import CartDropdown from '../cartDropdown/CartDropdown';
 
-function Navbar({ currentUser }) {
+function Navbar({ currentUser, hidden }) {
     return (
         <nav className="navbar">
             <Link className="logo-container" to="/"> <Logo className="logo" /> </Link>
@@ -17,14 +19,19 @@ function Navbar({ currentUser }) {
                     :
                     <Link className="option" to="/login">SIGN IN</Link>
                 }
+                <CartIcon/>
             </div>
-        </nav>
-    )
+            {
+                hidden ? null : <CartDropdown/>
+            }
+        </nav>   
+    ) 
 }
-
-const mapStateToProps = (state) => ({
-    currentUser: state.user.currentUser
+ 
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser,
+    hidden: state.cart.hidden
 })
 
 export default connect(mapStateToProps)(Navbar);
-  
+   

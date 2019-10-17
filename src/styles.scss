@@ -141,12 +141,15 @@ $main-color: black;
     padding: 1rem 0rem;
     .logo-container {
         display: flex;
+        justify-content: center;
+        align-items: center;
         width: 70px;
         height: 100%;
     }
     .menu {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         font-size: 1.3rem;
         .option {
             margin: 0 1rem;
@@ -154,6 +157,57 @@ $main-color: black;
         }
     }
 }
+
+//-------------------------------------------------- CART ICON
+.cart-icon {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .shopping-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .item-count {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 12px;
+  }
+}
+
+//-------------------------------------------------- CART DROPDOWN
+.cart-dropdown {
+  position: absolute;
+  width: 240px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+  top: 90px;
+  right: 40px;
+  z-index: 5;
+
+  .cart-items {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
+
+
 
 
 //-------------------------------------------------- SIGN IN COMPONENT
@@ -261,4 +315,7 @@ $main-color: black;
         }
     }
   }
+
+
+
   
