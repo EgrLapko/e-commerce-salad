@@ -7,7 +7,10 @@ import Navbar from './components/navbar/Navbar';
 import Login from './pages/Login';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import { setCurrentUser } from './redux/user/user-actions';
+import { selectCurrentUser } from './redux/user/user-selectors';
+import CheckOutPage from './pages/CheckOutPage';
 
 
 class App extends Component {
@@ -54,14 +57,15 @@ class App extends Component {
               )
             } 
           />
+          <Route exact path='/checkout' component={CheckOutPage}/>
         </Switch>
     </div>
     )
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
