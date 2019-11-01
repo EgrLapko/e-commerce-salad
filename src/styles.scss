@@ -403,6 +403,18 @@ $main-color: black;
     margin-left: auto;
     font-size: 36px;
   }
+  .test-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 1rem;
+    p {
+      margin: 0;
+    }
+  }
 }
 
 //-------------------------------------------------- CHECKOUT ITEM
