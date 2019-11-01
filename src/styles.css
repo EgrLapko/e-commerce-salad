@@ -98,6 +98,65 @@ a {
           font-weight: lighter;
           font-size: 16px; }
 
+.collections-overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.collection-item {
+  width: 22vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 35rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+  .collection-item .image {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px; }
+  .collection-item .collection-footer {
+    width: 100%;
+    height: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 18px; }
+    .collection-item .collection-footer .name {
+      width: 90%;
+      margin-bottom: 15px; }
+    .collection-item .collection-footer .price {
+      width: 10%; }
+  .collection-item .custom-button {
+    width: 80%;
+    opacity: .7;
+    top: 80%;
+    position: absolute;
+    border: none;
+    display: none; }
+  .collection-item:hover .image {
+    opacity: .8; }
+  .collection-item:hover .custom-button {
+    opacity: .85;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
 .collection-preview {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,55 +176,6 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-    .collection-preview .preview .collection-item {
-      width: 22%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      height: 35rem;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      position: relative; }
-      .collection-preview .preview .collection-item .image {
-        width: 100%;
-        height: 95%;
-        background-size: cover;
-        background-position: center;
-        margin-bottom: 5px; }
-      .collection-preview .preview .collection-item .collection-footer {
-        width: 100%;
-        height: 5%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        font-size: 18px; }
-        .collection-preview .preview .collection-item .collection-footer .name {
-          width: 90%;
-          margin-bottom: 15px; }
-        .collection-preview .preview .collection-item .collection-footer .price {
-          width: 10%; }
-      .collection-preview .preview .collection-item .custom-button {
-        width: 80%;
-        opacity: .7;
-        top: 80%;
-        position: absolute;
-        border: none;
-        display: none; }
-      .collection-preview .preview .collection-item:hover .image {
-        opacity: .8; }
-      .collection-preview .preview .collection-item:hover .custom-button {
-        opacity: .85;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
 
 .navbar {
   display: -webkit-box;
@@ -475,3 +485,23 @@ a {
   .checkout-item .remove-button {
     padding-left: 12px;
     cursor: pointer; }
+
+.collection-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .collection-page .title {
+    font-size: 38px;
+    margin: 0 auto 30px; }
+  .collection-page .items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px; }
+    .collection-page .items .collection-item {
+      margin-bottom: 30px; }

@@ -89,6 +89,58 @@ $main-color: black;
 
 //-------------------------------------------------- PRODUCTS VISUAL
 
+.collections-overview {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-item {
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+  height: 35rem;
+  align-items: center;
+  position: relative;
+  .image {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+  }
+  .collection-footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    .name {
+      width: 90%;
+      margin-bottom: 15px;
+    }
+    .price {
+      width: 10%;
+    }
+  }
+  .custom-button {
+    width: 80%;
+    opacity: .7;
+    top: 80%;
+    position: absolute;
+    border: none;
+    display: none;
+  }
+  &:hover {
+    .image {
+      opacity: .8;
+    }
+    .custom-button {
+      opacity: .85;
+      display: flex;
+    }
+  }
+}
+
 .collection-preview {
     display: flex;
     flex-direction: column;
@@ -101,52 +153,6 @@ $main-color: black;
     .preview {
       display: flex;
       justify-content: space-between;
-      .collection-item {
-        width: 22%;
-        display: flex;
-        flex-direction: column;
-        height: 35rem;
-        align-items: center;
-        position: relative;
-        .image {
-          width: 100%;
-          height: 95%;
-          background-size: cover;
-          background-position: center;
-          margin-bottom: 5px;
-        }
-        .collection-footer {
-          width: 100%;
-          height: 5%;
-          display: flex;
-          justify-content: space-between;
-          font-size: 18px;
-          .name {
-            width: 90%;
-            margin-bottom: 15px;
-          }
-          .price {
-            width: 10%;
-          }
-        }
-        .custom-button {
-          width: 80%;
-          opacity: .7;
-          top: 80%;
-          position: absolute;
-          border: none;
-          display: none;
-        }
-        &:hover {
-          .image {
-            opacity: .8;
-          }
-          .custom-button {
-            opacity: .85;
-            display: flex;
-          }
-        }
-      }
     }
 }
 
@@ -435,6 +441,26 @@ $main-color: black;
     cursor: pointer;
   }
 }
+
+//-------------------------------------------------- COLLECTION PAGE
+
+.collection-page {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 38px;
+    margin: 0 auto 30px;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    .collection-item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
 
 
 

@@ -6,7 +6,7 @@ import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartDropdown from '../cartDropdown/CartDropdown';
 import { createStructuredSelector } from 'reselect';
-import { selectCartHidden, selectCartItems } from '../../redux/cart/cart-selectors';
+import { selectCartHidden } from '../../redux/cart/cart-selectors';
 import { selectCurrentUser } from '../../redux/user/user-selectors';
 
 function Navbar({ currentUser, hidden }) {
